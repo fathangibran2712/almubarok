@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#173f35">
+  <title>Penerimaan Santri Baru — Darul Hadits Al-Mubarok</title>
+  <meta name="description" content="Informasi penerimaan santri baru Pondok Pesantren Darul Hadits Al-Mubarok, persyaratan, alur pendaftaran, dan formulir calon santri.">
+  <style>
+    :root{
+      --green:#173f35;--green-dark:#102e27;--green-mid:#28594b;
+      --ivory:#f7f4eb;--paper:#fffdf8;--gold:#c5a568;--ink:#202722;
+      --muted:#69736c;--line:#dedfd5;--soft:#e9eee8;--danger:#9e3d32;
+      --serif:Georgia,"Times New Roman",serif;
+      --sans:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      --shadow:0 20px 60px rgba(16,46,39,.08);
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--ivory);color:var(--ink);font-family:var(--sans);line-height:1.6}
+    a{color:inherit;text-decoration:none}
+    button,input,select,textarea{font:inherit}
+    button,a,input,select,textarea{outline-color:var(--gold);outline-offset:3px}
+    button{cursor:pointer}
+    .topline{height:5px;background:var(--gold)}
+    .shell{width:min(1160px,calc(100% - 44px));margin:auto}
+    .site-header{position:sticky;top:0;z-index:20;background:rgba(247,244,235,.94);backdrop-filter:blur(16px);border-bottom:1px solid rgba(23,63,53,.12)}
+    .nav{min-height:84px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+    .brand{display:flex;align-items:center;gap:13px;min-width:0}
+    .brand-mark{width:43px;height:43px;display:grid;place-items:center;background:var(--green);color:var(--ivory);border-radius:50% 50% 4px 4px;font-family:var(--serif);font-size:22px;flex:none}
+    .brand-name{display:block;font-size:12px;font-weight:800;letter-spacing:.09em;line-height:1.35;text-transform:uppercase;color:var(--green)}
+    .brand-sub{display:block;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-top:3px}
+    .nav-links{display:flex;align-items:center;gap:29px;font-size:13px;font-weight:650;color:#48564d}
+    .nav-links a{padding:10px 0;position:relative}
+    .nav-links a.active,.nav-links a:hover{color:var(--green)}
+    .nav-links a.active:after{content:"";position:absolute;bottom:3px;left:0;right:0;height:2px;background:var(--gold)}
+    .nav-cta,.btn{border:1px solid var(--green);background:var(--green);color:white;padding:13px 19px;display:inline-flex;align-items:center;justify-content:center;gap:10px;font-size:12px;font-weight:750;letter-spacing:.025em;transition:transform .2s,background .2s,border .2s}
+    .nav-cta:hover,.btn:hover{background:var(--green-dark);transform:translateY(-1px)}
+    .btn.secondary{background:transparent;color:var(--green)}
+    .btn.secondary:hover{background:var(--soft)}
+    .btn.gold{background:var(--gold);border-color:var(--gold);color:var(--green-dark)}
+    .btn:disabled{opacity:.4;cursor:not-allowed;transform:none}
+    .menu-toggle{display:none;background:transparent;border:1px solid var(--line);color:var(--green);width:43px;height:43px;font-size:21px}
+    main{min-height:65vh}
+    .eyebrow{display:flex;align-items:center;gap:10px;color:var(--green-mid);font-size:10px;font-weight:800;letter-spacing:.18em;text-transform:uppercase}
+    .eyebrow:before{content:"";width:26px;height:1px;background:var(--gold)}
+    h1,h2,h3,p{margin-top:0}
+    h1,h2,.serif{font-family:var(--serif);font-weight:500;letter-spacing:-.035em}
+    h1{font-size:clamp(43px,6.2vw,76px);line-height:1.02;margin:21px 0 23px}
+    h2{font-size:clamp(34px,4.2vw,52px);line-height:1.08;margin-bottom:18px}
+    h3{font-size:17px;line-height:1.3}
+    .lead{max-width:560px;color:#59655d;font-size:16px;line-height:1.85}
+    .hero{padding:72px 0 76px;overflow:hidden}
+    .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:65px;align-items:center}
+    .hero h1 em{font-style:normal;color:var(--green-mid)}
+    .hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+    .micro-note{font-size:11px;color:var(--muted);margin-top:22px;display:flex;align-items:center;gap:9px}
+    .micro-note:before{content:"";width:7px;height:7px;background:var(--gold);border-radius:50%}
+    .hero-art{position:relative;min-height:455px;background:var(--green);color:var(--ivory);padding:36px;overflow:hidden}
+    .hero-art:before{content:"";position:absolute;width:370px;height:370px;border:1px solid rgba(247,244,235,.23);border-radius:50%;right:-88px;top:-85px}
+    .hero-art:after{content:"";position:absolute;width:260px;height:260px;border:1px solid rgba(197,165,104,.65);border-radius:50%;right:-31px;top:-30px}
+    .art-kicker{font-size:10px;letter-spacing:.19em;text-transform:uppercase;color:#d6c69f;position:relative;z-index:1}
+    .art-title{font-family:var(--serif);font-size:clamp(35px,4.5vw,55px);line-height:1.08;max-width:370px;margin-top:60px;position:relative;z-index:1}
+    .art-quote{border-top:1px solid rgba(247,244,235,.28);padding-top:18px;margin-top:55px;font-size:12px;max-width:310px;color:#dce4dc;position:relative;z-index:1}
+    .art-seal{position:absolute;bottom:27px;right:27px;width:88px;height:88px;border:1px solid var(--gold);border-radius:50%;display:grid;place-items:center;color:var(--gold);font-family:var(--serif);font-size:25px;transform:rotate(-12deg)}
+    .art-seal span{font-size:9px;letter-spacing:.1em;position:absolute;bottom:17px}
+    .ticker{background:var(--gold);color:var(--green-dark);padding:15px 0}
+    .ticker-inner{display:flex;justify-content:space-between;align-items:center;gap:20px;font-size:10px;font-weight:800;letter-spacing:.14em;text-transform:uppercase}
+    .ticker .dot{font-size:16px;margin:0 12px}
+    .section{padding:88px 0}
+    .section.white{background:var(--paper)}
+    .section-head{display:flex;justify-content:space-between;align-items:end;gap:35px;margin-bottom:38px}
+    .section-head p{max-width:380px;color:var(--muted);font-size:14px;margin-bottom:5px}
+    .section-head h2{max-width:570px;margin:15px 0 0}
+    .principles{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+    .principle{padding:28px 27px 31px 0}
+    .principle+.principle{padding-left:28px;border-left:1px solid var(--line)}
+    .number{font-family:var(--serif);font-size:33px;color:var(--gold);margin-bottom:20px}
+    .principle h3{color:var(--green);margin-bottom:10px}
+    .principle p{font-size:13px;color:var(--muted);margin:0;max-width:300px}
+    .callout{background:var(--green-dark);color:var(--ivory);padding:48px;display:grid;grid-template-columns:1fr auto;align-items:center;gap:35px}
+    .callout h2{font-size:clamp(30px,4vw,43px);max-width:640px;margin:14px 0}
+    .callout p{color:#c8d2ca;font-size:13px;max-width:560px;margin:0}
+    .callout .eyebrow{color:#d6c69f}
+    .page-hero{padding:68px 0 52px;background:var(--green);color:var(--ivory)}
+    .page-hero .eyebrow{color:#d6c69f}
+    .page-hero h1{font-size:clamp(42px,6vw,66px);max-width:800px;margin-bottom:18px}
+    .page-hero p{color:#d1ddd4;max-width:620px;font-size:15px}
+    .page-hero .hero-meta{border-top:1px solid rgba(255,255,255,.22);padding-top:17px;margin-top:35px;display:flex;gap:35px;flex-wrap:wrap;color:#d6c69f;font-size:10px;font-weight:800;letter-spacing:.12em;text-transform:uppercase}
+    .info-layout{display:grid;grid-template-columns:250px 1fr;gap:65px}
+    .side-index{position:sticky;top:112px;align-self:start;border-top:1px solid var(--line)}
+    .side-index a{display:block;padding:14px 0;border-bottom:1px solid var(--line);font-size:12px;color:var(--muted)}
+    .side-index a:hover{color:var(--green)}
+    .info-block{padding:0 0 35px;margin-bottom:35px;border-bottom:1px solid var(--line);scroll-margin-top:120px}
+    .info-block h2{font-size:34px}
+    .info-block p,.info-block li{color:#58645c;font-size:14px;line-height:1.85}
+    .info-block ul{padding-left:20px}
+    .notice{border-left:3px solid var(--gold);padding:17px 20px;background:#efeee5;color:#5c655c;font-size:12px;margin:24px 0}
+    .form-wrap{padding:56px 0 90px}
+    .form-intro{max-width:740px;margin:0 auto 30px;text-align:center}
+    .form-intro h1{font-size:clamp(38px,5vw,57px)}
+    .form-intro p{color:var(--muted);font-size:14px}
+    .admission-kicker{display:inline-flex;align-items:center;gap:9px;color:#715c31;font-size:10px;font-weight:800;letter-spacing:.13em;text-transform:uppercase;margin-bottom:17px}
+    .admission-kicker:before{content:"";width:22px;height:1px;background:var(--gold)}
+    .form-card{max-width:850px;margin:auto;background:var(--paper);border:1px solid var(--line);box-shadow:var(--shadow)}
+    .stepper{display:grid;grid-template-columns:repeat(3,1fr);border-bottom:1px solid var(--line)}
+    .step{padding:18px 22px;display:flex;align-items:center;gap:11px;color:#8b938c;font-size:11px;font-weight:750}
+    .step .circle{width:27px;height:27px;border:1px solid #cdd2ca;border-radius:50%;display:grid;place-items:center;font-size:11px;flex:none}
+    .step.active{color:var(--green);background:#f0f2eb}
+    .step.active .circle{background:var(--green);border-color:var(--green);color:white}
+    .step.done{color:var(--green)}
+    .step.done .circle{background:var(--gold);border-color:var(--gold);color:var(--green-dark)}
+    .form-content{padding:36px}
+    .form-content h2{font-size:32px;margin-bottom:9px}
+    .form-content .sub{font-size:13px;color:var(--muted);margin-bottom:28px}
+    .fields{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+    .field{display:flex;flex-direction:column;gap:7px}
+    .field.full{grid-column:1/-1}
+    .field label{font-size:11px;font-weight:750;color:#394a40}
+    .field label .req{color:#9e3d32}
+    .field input,.field select,.field textarea{width:100%;border:1px solid #d5d9cf;background:#fffefa;padding:12px 13px;color:var(--ink);font-size:13px;border-radius:0;min-height:46px}
+    .field textarea{resize:vertical;min-height:100px}
+    .field input:focus,.field select:focus,.field textarea:focus{border-color:var(--green);outline:2px solid rgba(23,63,53,.1)}
+    .field .hint{font-size:10px;color:var(--muted)}
+    .form-error{color:var(--danger);font-size:11px;min-height:15px}
+    .form-actions{display:flex;align-items:center;justify-content:space-between;gap:15px;border-top:1px solid var(--line);margin-top:30px;padding-top:23px}
+    .form-actions .quiet{font-size:11px;color:var(--muted)}
+    .review-list{border-top:1px solid var(--line)}
+    .review-row{display:grid;grid-template-columns:180px 1fr;gap:18px;padding:15px 0;border-bottom:1px solid var(--line);font-size:13px}
+    .review-row .key{color:var(--muted);font-size:11px}
+    .review-row .value{font-weight:650;overflow-wrap:anywhere}
+    .success-panel{text-align:center;padding:28px 10px 20px}
+    .success-icon{width:62px;height:62px;border:1px solid var(--gold);border-radius:50%;display:grid;place-items:center;margin:0 auto 23px;color:var(--green);font-size:27px}
+    .success-panel h2{font-size:38px}
+    .success-panel p{max-width:480px;margin:0 auto 22px;color:var(--muted);font-size:14px}
+    .site-footer{background:#0d2822;color:var(--ivory);padding:48px 0 24px}
+    .footer-grid{display:grid;grid-template-columns:1.3fr .7fr;gap:60px;padding-bottom:38px}
+    .footer-title{font-family:var(--serif);font-size:27px;line-height:1.2;max-width:410px;margin:15px 0}
+    .footer-copy{font-size:12px;color:#c1cec4;max-width:440px}
+    .footer-links{display:flex;flex-direction:column;gap:11px;font-size:12px;color:#d3ddd5}
+    .footer-links strong{font-size:10px;text-transform:uppercase;letter-spacing:.15em;color:#d6c69f;margin-bottom:5px}
+    .footer-bottom{border-top:1px solid rgba(255,255,255,.17);padding-top:19px;display:flex;justify-content:space-between;gap:20px;color:#9eafa3;font-size:10px}
+    .toast{position:fixed;bottom:20px;left:50%;transform:translate(-50%,20px);background:var(--green-dark);color:white;padding:13px 18px;font-size:12px;z-index:60;opacity:0;pointer-events:none;transition:.25s;box-shadow:var(--shadow);max-width:calc(100% - 30px)}
+    .toast.show{opacity:1;transform:translate(-50%,0)}
+    .hidden{display:none!important}
+    @media(max-width:850px){
+      .nav-links{gap:17px}.nav-cta{display:none}
+      .hero-grid{gap:32px}.hero-art{min-height:410px;padding:28px}
+      .info-layout{grid-template-columns:190px 1fr;gap:35px}
+      .callout{padding:35px;grid-template-columns:1fr}
+      .footer-grid{gap:35px}
+    }
+    @media(max-width:650px){
+      .shell{width:min(100% - 32px,1160px)}
+      .nav{min-height:72px}.brand-mark{width:38px;height:38px}.brand-name{font-size:10px}.brand-sub{font-size:9px}
+      .menu-toggle{display:block}.nav-links{display:none;position:absolute;top:72px;left:0;right:0;background:var(--ivory);padding:15px 22px 20px;border-bottom:1px solid var(--line);flex-direction:column;align-items:stretch;gap:4px}
+      .nav-links.open{display:flex}.nav-links a{padding:12px 0}.nav-links a.active:after{right:auto;width:35px;bottom:6px}
+      .hero{padding:46px 0 48px}.hero-grid{grid-template-columns:1fr;gap:35px}.hero h1{font-size:49px}
+      .hero-art{min-height:355px}.art-title{margin-top:42px;font-size:42px}.art-quote{margin-top:37px;max-width:245px}
+      .ticker-inner{justify-content:center;text-align:center;flex-wrap:wrap;gap:4px;font-size:9px}.ticker-inner span:nth-child(2){display:none}
+      .section{padding:60px 0}.section-head{display:block}.section-head p{margin-top:18px}
+      .principles{grid-template-columns:1fr}.principle,.principle+.principle{padding:23px 0;border-left:0;border-bottom:1px solid var(--line)}.principle:last-child{border-bottom:0}
+      .callout{padding:28px 23px}.callout .btn{justify-self:start}
+      .page-hero{padding:47px 0 38px}.page-hero h1{font-size:44px}.page-hero .hero-meta{gap:15px}
+      .info-layout{grid-template-columns:1fr;gap:30px}.side-index{position:static;display:grid;grid-template-columns:1fr 1fr;gap:0}
+      .side-index a{padding:11px 8px 11px 0;font-size:11px}.info-block h2{font-size:30px}
+      .form-wrap{padding:40px 0 60px}.form-intro h1{font-size:40px}
+      .step{padding:13px 7px;gap:6px;flex-direction:column;text-align:center;font-size:9px}.step .circle{width:25px;height:25px}
+      .form-content{padding:24px 19px}.form-content h2{font-size:28px}.fields{grid-template-columns:1fr;gap:16px}.field.full{grid-column:auto}
+      .form-actions{align-items:stretch}.form-actions .btn{padding:12px}.form-actions .quiet{max-width:120px}
+      .review-row{grid-template-columns:1fr;gap:4px}.footer-grid{grid-template-columns:1fr;gap:28px}.footer-bottom{flex-direction:column;gap:8px}
+    }
+    @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition:none!important}}
+    :root{
+      --green:#174a3b;--green-dark:#10372c;--green-mid:#326b55;
+      --ivory:#f8f6ef;--paper:#fffefa;--gold:#c6a568;--ink:#1d2922;
+      --muted:#65736a;--line:#e2e4da;--soft:#edf2ec;
+      --shadow:0 24px 70px rgba(16,46,39,.11);
+    }
+    body{letter-spacing:.005em}
+    a,button{ -webkit-tap-highlight-color:transparent}
+    a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{
+      outline:3px solid #c6a568;outline-offset:4px
+    }
+    main:focus{outline:0}
+    main:focus-visible{outline:0}
+    .skip-link{position:fixed;top:12px;left:12px;z-index:100;padding:11px 16px;background:var(--green-dark);color:#fff;transform:translateY(-160%);transition:transform .2s}
+    .skip-link:focus{transform:translateY(0)}
+    .site-header{box-shadow:0 5px 24px rgba(16,46,39,.035)}
+    .brand-mark{box-shadow:inset 0 0 0 1px rgba(255,255,255,.22)}
+    .nav-links a{transition:color .2s}
+    .nav-cta,.btn{min-height:46px;border-radius:3px;box-shadow:0 5px 14px rgba(16,46,39,.08)}
+    .btn.secondary{box-shadow:none}
+    .hero{position:relative;padding:82px 0 86px;background:
+      radial-gradient(ellipse at 5% 8%,rgba(198,165,104,.11),transparent 30%),
+      linear-gradient(180deg,#fbfaf5 0%,var(--ivory) 100%)}
+    .hero-grid{grid-template-columns:1fr 1fr;gap:clamp(35px,6vw,78px)}
+    .hero h1{font-size:clamp(48px,6.1vw,77px);line-height:1.04;max-width:620px}
+    .hero .lead{font-size:16px}
+    .hero-art{
+      min-height:478px;padding:38px;
+      background:linear-gradient(145deg,#1d5643 0%,#12392e 72%,#0e3027 100%);
+      box-shadow:0 28px 70px rgba(16,46,39,.2)
+    }
+    .hero-art:before{width:400px;height:400px;right:-104px;top:-110px;border-color:rgba(247,244,235,.2)}
+    .hero-art:after{width:282px;height:282px;right:-45px;top:-42px}
+    .art-kicker{display:flex;align-items:center;gap:9px}
+    .art-kicker:before{content:"";width:20px;height:1px;background:var(--gold)}
+    .art-title{font-size:clamp(39px,4.3vw,57px);margin-top:67px;max-width:340px}
+    .art-quote{margin-top:40px;max-width:270px;line-height:1.8}
+    .art-seal{width:96px;height:96px;bottom:32px;right:32px;background:rgba(16,46,39,.35)}
+    .art-seal:before{content:"";position:absolute;inset:5px;border:1px dashed rgba(198,165,104,.72);border-radius:50%}
+    .art-seal span{white-space:nowrap}
+    .ticker{padding:16px 0}
+    .section{padding:96px 0}
+    .section-head{margin-bottom:44px}
+    .principle{padding-top:32px;padding-bottom:35px;transition:transform .2s}
+    .principle:hover{transform:translateY(-3px)}
+    .number{font-size:38px;color:#967438}
+    .callout{position:relative;overflow:hidden;box-shadow:var(--shadow)}
+    .callout:after{content:"";position:absolute;width:260px;height:260px;border:1px solid rgba(198,165,104,.28);border-radius:50%;right:-95px;top:-125px;pointer-events:none}
+    .callout .btn{z-index:1}
+    .page-hero{position:relative;overflow:hidden;background:
+      radial-gradient(circle at 92% 20%,rgba(198,165,104,.16),transparent 24%),
+      linear-gradient(125deg,#174a3b,#10372c)}
+    .page-hero:after{content:"";position:absolute;width:320px;height:320px;border:1px solid rgba(255,255,255,.1);border-radius:50%;right:-95px;bottom:-240px;box-shadow:0 0 0 24px rgba(255,255,255,.025),0 0 0 48px rgba(255,255,255,.02)}
+    .page-hero .shell{position:relative;z-index:1}
+    .page-hero .admission-kicker{color:#e5d1a5}
+    .info-block{padding-bottom:42px;margin-bottom:42px}
+    .info-block:last-child{margin-bottom:0}
+    .notice{border-radius:0 5px 5px 0;line-height:1.75}
+    .form-card{border-radius:5px;overflow:hidden;box-shadow:0 25px 75px rgba(16,46,39,.12)}
+    .stepper{background:#fffefa}
+    .step{font-size:12px}
+    .form-content{padding:40px}
+    .field{gap:8px}
+    .field label{font-size:12px}
+    .optional{font-size:10px;font-weight:550;color:var(--muted)}
+    .field input,.field select,.field textarea{border-radius:3px;transition:border-color .18s,box-shadow .18s,background .18s}
+    .field input:hover,.field select:hover,.field textarea:hover{border-color:#aeb9ac}
+    .field input:focus,.field select:focus,.field textarea:focus{box-shadow:0 0 0 3px rgba(23,74,59,.1);outline:0}
+    .field [aria-invalid="true"]{border-color:var(--danger);background:#fffafa}
+    .form-error{min-height:0}
+    .form-error:not(:empty){min-height:16px}
+    .form-actions{margin-top:35px}
+    .review-row{padding:17px 0}
+    .site-footer{background:linear-gradient(135deg,#10372c,#0b2821)}
+    .footer-links a{width:fit-content;transition:color .2s}
+    .footer-links a:hover{color:#e4cf9f}
+    .not-found{padding:100px 0;text-align:center}
+    .not-found .shell{max-width:640px}
+    @media(max-width:850px){
+      .hero{padding:62px 0 66px}
+      .hero-grid{gap:32px}
+      .hero-art{min-height:430px}
+      .art-seal{right:25px;bottom:25px}
+      .form-content{padding:32px}
+    }
+    @media(max-width:650px){
+      .hero{padding:46px 0 50px}
+      .hero h1{font-size:clamp(44px,12vw,56px)}
+      .hero-grid{grid-template-columns:1fr;gap:32px}
+      .hero-art{min-height:370px;padding:27px}
+      .art-title{font-size:42px;margin-top:44px}
+      .art-quote{margin-top:31px;max-width:220px}
+      .art-seal{width:78px;height:78px;right:19px;bottom:18px;font-size:21px}
+      .section{padding:64px 0}
+      .form-content{padding:25px 20px}
+      .step{font-size:9px;min-height:82px}
+      .form-actions{flex-direction:column;align-items:stretch}
+      .form-actions .quiet{max-width:none}
+      .form-actions>div{justify-content:flex-end}
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#app">Lewati ke konten utama</a>
+  <div class="topline"></div>
+  <header class="site-header">
+    <div class="shell nav">
+      <a class="brand" href="#/" aria-label="Beranda Darul Hadits Al-Mubarok">
+        <span class="brand-mark">م</span>
+        <span><span class="brand-name">Darul Hadits<br>Al-Mubarok</span><span class="brand-sub">Penerimaan Santri Baru</span></span>
+      </a>
+      <nav class="nav-links" id="navLinks" aria-label="Navigasi utama">
+        <a href="#/" data-route="/">Beranda</a>
+        <a href="#/info-ppdb" data-route="/info-ppdb">Informasi PPDB</a>
+        <a href="#/formulir-ppdb" data-route="/formulir-ppdb">Formulir</a>
+      </nav>
+      <a class="nav-cta" href="#/formulir-ppdb">Daftar sekarang <span aria-hidden="true">↗</span></a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Buka navigasi" aria-controls="navLinks" aria-expanded="false">☰</button>
+    </div>
+  </header>
+
+  <main id="app" tabindex="-1"></main>
+
+  <footer class="site-footer">
+    <div class="shell">
+      <div class="footer-grid">
+        <div>
+          <div class="eyebrow" style="color:#d6c69f">Pondok Pesantren</div>
+          <div class="footer-title">Menjaga Akhlak, Meneladani Sunnah.</div>
+          <p class="footer-copy">Pendidikan yang menumbuhkan ilmu, adab, dan kepedulian dalam kehidupan sehari-hari.</p>
+        </div>
+        <div class="footer-links">
+          <strong>Jelajahi</strong>
+          <a href="#/">Beranda</a>
+          <a href="#/info-ppdb">Informasi PPDB</a>
+          <a href="#/formulir-ppdb">Formulir Pendaftaran</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span id="year"></span> Pondok Pesantren Darul Hadits Al-Mubarok</span>
+        <span>Informasi penerimaan santri baru Darul Hadits Al-Mubarok.</span>
+      </div>
+    </div>
+  </footer>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script>
+    const app = document.getElementById('app');
+    const navLinks = document.getElementById('navLinks');
+    const menuToggle = document.getElementById('menuToggle');
+    const toast = document.getElementById('toast');
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    const escapeHTML = (value) => String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+    function showToast(message){
+      toast.textContent = message;
+      toast.classList.add('show');
+      clearTimeout(showToast.timer);
+      showToast.timer = setTimeout(()=>toast.classList.remove('show'), 3000);
+    }
+    function setActiveNav(route){
+      document.querySelectorAll('[data-route]').forEach(a=>{
+        const active=a.dataset.route===route;
+        a.classList.toggle('active',active);
+        if(active)a.setAttribute('aria-current','page');
+        else a.removeAttribute('aria-current');
+      });
+      navLinks.classList.remove('open');
+      menuToggle.setAttribute('aria-expanded','false');
+      menuToggle.textContent='☰';
+      menuToggle.setAttribute('aria-label','Buka navigasi');
+    }
+    menuToggle.addEventListener('click',()=>{
+      const open=navLinks.classList.toggle('open');
+      menuToggle.setAttribute('aria-expanded',String(open));
+      menuToggle.textContent=open?'×':'☰';
+      menuToggle.setAttribute('aria-label',open?'Tutup navigasi':'Buka navigasi');
+    });
+    document.addEventListener('keydown',event=>{
+      if(event.key==='Escape' && navLinks.classList.contains('open')){
+        navLinks.classList.remove('open');
+        menuToggle.setAttribute('aria-expanded','false');
+        menuToggle.setAttribute('aria-label','Buka navigasi');
+        menuToggle.textContent='☰';
+        menuToggle.focus();
+      }
+    });
+
+    const homeTemplate = () => `
+      <section class="hero">
+        <div class="shell hero-grid">
+          <div>
+            <div class="admission-kicker">Penerimaan Santri Baru</div>
+            <div class="eyebrow">Pondok Pesantren Darul Hadits Al-Mubarok</div>
+            <h1>Menuntut ilmu.<br><em>Menjaga adab.</em></h1>
+            <p class="lead">Lingkungan pendidikan Islam yang membimbing santri untuk mencintai ilmu, membiasakan adab, dan mengamalkan nilai-nilai kebaikan. Kenali informasi penerimaan dan langkah pendaftaran calon santri.</p>
+            <div class="hero-actions">
+              <a class="btn" href="#/info-ppdb">Informasi pendaftaran <span aria-hidden="true">↗</span></a>
+              <a class="btn secondary" href="#/formulir-ppdb">Daftar sekarang</a>
+            </div>
+            <div class="micro-note">Pendaftaran dibuka untuk calon santri baru.</div>
+          </div>
+          <div class="hero-art" role="img" aria-label="Motto Pondok Pesantren Darul Hadits Al-Mubarok">
+            <div class="art-kicker">Pondok Pesantren</div>
+            <div class="art-title">Ilmu yang diamalkan.<br>Adab yang dijaga.</div>
+            <div class="art-quote">Membina generasi yang berilmu, berakhlak mulia, dan bermanfaat bagi sesama.</div>
+            <div class="art-seal">م<span>AL-MUBAROK</span></div>
+          </div>
+        </div>
+      </section>
+      <div class="ticker"><div class="shell ticker-inner"><span>Penerimaan santri baru</span><span class="dot">✳</span><span>Persyaratan pendaftaran</span><span class="dot">✳</span><span>Formulir calon santri</span></div></div>
+      <section class="section white">
+        <div class="shell">
+          <div class="section-head">
+            <div><div class="eyebrow">Alur pendaftaran</div><h2>Tiga langkah menuju pendaftaran.</h2></div>
+            <p>Siapkan informasi calon santri dan wali agar pengisian formulir dapat dilakukan dengan lancar.</p>
+          </div>
+          <div class="principles">
+            <article class="principle"><div class="number">01</div><h3>Siapkan data santri</h3><p>Nama lengkap, tanggal lahir, alamat, dan informasi sekolah sebelumnya.</p></article>
+            <article class="principle"><div class="number">02</div><h3>Lengkapi data wali</h3><p>Nama wali, hubungan keluarga, serta nomor telepon yang aktif.</p></article>
+            <article class="principle"><div class="number">03</div><h3>Periksa lalu kirim</h3><p>Tinjau kembali setiap isian sebelum mengirim formulir pendaftaran.</p></article>
+          </div>
+        </div>
+      </section>
+      <section class="section">
+        <div class="shell">
+          <div class="callout">
+            <div><div class="eyebrow">Penerimaan santri baru</div><h2>Mulai langkah baru bersama Darul Hadits Al-Mubarok.</h2><p>Pelajari persyaratan dan alur pendaftaran sebelum mengisi formulir calon santri.</p></div>
+            <a class="btn gold" href="#/info-ppdb">Lihat persyaratan <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+      </section>`;
+
+    const infoTemplate = () => `
+      <section class="page-hero">
+        <div class="shell">
+          <div class="admission-kicker">Darul Hadits Al-Mubarok</div>
+          <div class="eyebrow">Penerimaan santri baru</div>
+          <h1>Informasi Pendaftaran</h1>
+          <p>Persiapkan berkas dan data calon santri sebelum mengisi formulir. Ikuti tahapan pendaftaran agar proses berjalan lebih mudah.</p>
+          <div class="hero-meta"><span>01 — Lengkapi data</span><span>02 — Periksa formulir</span><span>03 — Ikuti informasi panitia</span></div>
+        </div>
+      </section>
+      <section class="section white">
+        <div class="shell info-layout">
+          <nav class="side-index" aria-label="Daftar isi informasi">
+            <a href="#gambaran">Gambaran umum</a><a href="#persiapan">Data yang disiapkan</a><a href="#alur">Alur pendaftaran</a><a href="#ketentuan">Catatan penting</a>
+          </nav>
+          <div>
+            <article class="info-block" id="gambaran"><div class="eyebrow">01 / Gambaran umum</div><h2>Selamat datang calon santri.</h2><p>Pondok Pesantren Darul Hadits Al-Mubarok membuka penerimaan santri baru. Calon santri dan orang tua dapat membaca persyaratan, menyiapkan data, lalu mengisi formulir pendaftaran melalui halaman ini.</p><div class="notice"><strong>Perhatian:</strong> pastikan seluruh data yang diisi sesuai dan dapat dihubungi. Informasi lanjutan mengenai proses penerimaan akan disampaikan melalui panitia pendaftaran.</div></article>
+            <article class="info-block" id="persiapan"><div class="eyebrow">02 / Persiapan</div><h2>Persyaratan pendaftaran.</h2><p>Siapkan informasi berikut sebelum mulai mengisi formulir:</p><ul><li>Data diri calon santri, termasuk nama, tempat dan tanggal lahir.</li><li>Alamat tempat tinggal dan asal sekolah.</li><li>Nama orang tua atau wali serta hubungan dengan calon santri.</li><li>Nomor telepon aktif yang dapat dihubungi panitia.</li><li>Alamat email wali, jika tersedia.</li></ul></article>
+            <article class="info-block" id="alur"><div class="eyebrow">03 / Alur pendaftaran</div><h2>Ikuti tahapan pendaftaran.</h2><ul><li><strong>Lengkapi formulir.</strong> Isi data calon santri dan orang tua atau wali.</li><li><strong>Periksa kembali.</strong> Pastikan ejaan nama dan informasi kontak sudah benar.</li><li><strong>Kirim pendaftaran.</strong> Selesaikan pengisian dan ikuti arahan panitia untuk tahapan berikutnya.</li></ul></article>
+            <article class="info-block" id="ketentuan"><div class="eyebrow">04 / Informasi lanjutan</div><h2>Siapkan diri untuk tahapan berikutnya.</h2><p>Informasi mengenai jadwal, kelengkapan berkas, dan tahapan seleksi dapat diperoleh dari panitia penerimaan santri baru. Pastikan nomor telepon wali yang dicantumkan selalu aktif.</p><a class="btn" href="#/formulir-ppdb">Isi formulir pendaftaran <span aria-hidden="true">↗</span></a></article>
+          </div>
+        </div>
+      </section>`;
+
+    const formState = {step:1, data:{nama:'',panggilan:'',jk:'',lahir:'',tanggal:'',alamat:'',asal:'',namaWali:'',hubungan:'',telepon:'',email:'',catatan:''}, errors:{}};
+    const steps = ['Data calon santri','Data orang tua / wali','Periksa data'];
+    function localDateValue(date=new Date()){
+      const offset=date.getTimezoneOffset()*60000;
+      return new Date(date.getTime()-offset).toISOString().slice(0,10);
+    }
+    function field(name,label,placeholder='',opts={}){
+      const value=formState.data[name] || '';
+      const required=opts.required!==false;
+      const error=formState.errors[name]||'';
+      const errorAttrs=`aria-invalid="${error?'true':'false'}" aria-describedby="${name}-error"`;
+      let control='';
+      if(opts.options){
+        control=`<select id="${name}" name="${name}" ${errorAttrs} ${required?'required':''}><option value="">Pilih ${label.toLowerCase()}</option>${opts.options.map(o=>`<option value="${escapeHTML(o)}" ${value===o?'selected':''}>${escapeHTML(o)}</option>`).join('')}</select>`;
+      } else if(opts.textarea){
+        control=`<textarea id="${name}" name="${name}" placeholder="${escapeHTML(placeholder)}" ${errorAttrs} ${required?'required':''} ${opts.maxlength?`maxlength="${opts.maxlength}"`:''}>${escapeHTML(value)}</textarea>`;
+      } else {
+        const maxDate=opts.type==='date'?`max="${localDateValue()}"`:'';
+        control=`<input id="${name}" name="${name}" type="${opts.type||'text'}" value="${escapeHTML(value)}" placeholder="${escapeHTML(placeholder)}" ${errorAttrs} ${required?'required':''} ${opts.autocomplete?`autocomplete="${opts.autocomplete}"`:''} ${opts.inputmode?`inputmode="${opts.inputmode}"`:''} ${opts.maxlength?`maxlength="${opts.maxlength}"`:''} ${maxDate}>`;
+      }
+      return `<div class="field ${opts.full?'full':''}"><label for="${name}">${label}${required?' <span class="req">*</span>':' <span class="optional">(opsional)</span>'}</label>${control}<div class="form-error" id="${name}-error" data-error="${name}" aria-live="polite">${escapeHTML(error)}</div></div>`;
+    }
+    function renderStepper(){
+      return `<div class="stepper" role="group" aria-label="Tahapan formulir">${steps.map((s,i)=>`<div class="step ${formState.step===i+1?'active':''} ${formState.step>i+1?'done':''}" ${formState.step===i+1?'aria-current="step"':''}><span class="circle" aria-hidden="true">${formState.step>i+1?'✓':i+1}</span><span>${s}</span></div>`).join('')}</div>`;
+    }
+    function reviewRows(items){
+      return `<div class="review-list">${items.map(([label,key])=>`<div class="review-row"><div class="key">${label}</div><div class="value">${escapeHTML(formState.data[key]||'—')}</div></div>`).join('')}</div>`;
+    }
+    function renderForm(){
+      const content = formState.step===1 ? `
+        <h2>Data calon santri</h2><p class="sub">Lengkapi identitas calon santri. Kolom bertanda * wajib diisi.</p>
+        <div class="fields">
+          ${field('nama','Nama lengkap','Sesuai dokumen identitas',{autocomplete:'name',maxlength:100})}
+          ${field('panggilan','Nama panggilan','Nama yang biasa digunakan',{required:false,autocomplete:'nickname',maxlength:60})}
+          ${field('jk','Jenis kelamin','',{options:['Laki-laki','Perempuan']})}
+          ${field('lahir','Tempat lahir','Kota / kabupaten',{maxlength:80})}
+          ${field('tanggal','Tanggal lahir','',{type:'date'})}
+          ${field('asal','Asal sekolah','Nama sekolah sebelumnya',{full:true,required:false,maxlength:120})}
+          ${field('alamat','Alamat tempat tinggal','Jalan, kelurahan/desa, kecamatan, kota/kabupaten',{textarea:true,full:true,autocomplete:'street-address',maxlength:300})}
+        </div>` : formState.step===2 ? `
+        <h2>Data orang tua / wali</h2><p class="sub">Cantumkan kontak wali yang aktif untuk keperluan informasi pendaftaran.</p>
+        <div class="fields">
+          ${field('namaWali','Nama orang tua / wali','Nama lengkap',{autocomplete:'name',maxlength:100})}
+          ${field('hubungan','Hubungan dengan calon santri','',{options:['Ayah','Ibu','Wali']})}
+          ${field('telepon','Nomor telepon aktif','Contoh: 08xxxxxxxxxx',{type:'tel',autocomplete:'tel',inputmode:'tel',maxlength:20})}
+          ${field('email','Alamat email','nama@email.com',{type:'email',autocomplete:'email',required:false,maxlength:120})}
+          ${field('catatan','Catatan tambahan','Tuliskan hal yang perlu diketahui (jika ada)',{textarea:true,full:true,required:false,maxlength:300})}
+        </div>` : `
+        <h2>Periksa kembali data</h2><p class="sub">Pastikan data sudah benar. Anda masih bisa kembali untuk memperbaikinya.</p>
+        <h3 style="margin:24px 0 12px;color:var(--green)">Calon santri</h3>
+        ${reviewRows([['Nama lengkap','nama'],['Nama panggilan','panggilan'],['Jenis kelamin','jk'],['Tempat lahir','lahir'],['Tanggal lahir','tanggal'],['Asal sekolah','asal'],['Alamat','alamat']])}
+        <h3 style="margin:25px 0 12px;color:var(--green)">Orang tua / wali</h3>
+        ${reviewRows([['Nama orang tua / wali','namaWali'],['Hubungan','hubungan'],['Nomor telepon','telepon'],['Email','email'],['Catatan','catatan']])}
+        <div class="notice">Periksa kembali ejaan nama, tanggal lahir, dan nomor telepon sebelum mengirim formulir.</div>`;
+      app.innerHTML = `<section class="form-wrap"><div class="shell"><div class="form-intro"><div class="admission-kicker">Penerimaan santri baru</div><div class="eyebrow" style="justify-content:center">Pondok Pesantren Darul Hadits Al-Mubarok</div><h1>Formulir Pendaftaran</h1><p>Lengkapi data calon santri dan orang tua atau wali. Pastikan informasi kontak dapat dihubungi.</p></div><div class="form-card">${renderStepper()}<form id="admissionForm" aria-label="Formulir pendaftaran calon santri" novalidate><div class="form-content">${content}<div class="form-actions"><span class="quiet">${formState.step===3?'Periksa data sebelum mengirim.':'Data dapat diperiksa kembali sebelum dikirim.'}</span><div style="display:flex;gap:9px">${formState.step>1?'<button class="btn secondary" type="button" id="prevStep">Kembali</button>':''}<button class="btn" type="submit">${formState.step===3?'Kirim pendaftaran':'Lanjutkan'} <span aria-hidden="true">→</span></button></div></div></div></form></div></div></section>`;
+      const form=document.getElementById('admissionForm');
+      form.addEventListener('submit',handleFormSubmit);
+      form.querySelectorAll('input,select,textarea').forEach(el=>{
+        el.addEventListener('input',()=>{formState.data[el.name]=el.value;delete formState.errors[el.name];el.setAttribute('aria-invalid','false');const error=form.querySelector(`[data-error="${el.name}"]`);if(error)error.textContent='';});
+        el.addEventListener('change',()=>{formState.data[el.name]=el.value;});
+      });
+      const prev=document.getElementById('prevStep');
+      if(prev)prev.addEventListener('click',()=>{saveVisibleFields();formState.step--;renderForm();window.scrollTo({top:0,behavior:'smooth'});});
+    }
+    function saveVisibleFields(){
+      document.querySelectorAll('#admissionForm input,#admissionForm select,#admissionForm textarea').forEach(el=>formState.data[el.name]=el.value);
+    }
+    function validateStep(){
+      saveVisibleFields();formState.errors={};
+      const requiredByStep=formState.step===1?['nama','jk','lahir','tanggal','alamat']:['namaWali','hubungan','telepon'];
+      requiredByStep.forEach(key=>{if(!String(formState.data[key]||'').trim())formState.errors[key]='Bagian ini perlu diisi.';});
+      if(formState.step===2 && formState.data.telepon && !/^[0-9+()\-\s]{8,20}$/.test(formState.data.telepon.trim()))formState.errors.telepon='Periksa kembali format nomor telepon.';
+      if(formState.step===2 && formState.data.email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formState.data.email.trim()))formState.errors.email='Format email belum sesuai.';
+      if(formState.step===1 && formState.data.tanggal && formState.data.tanggal>localDateValue())formState.errors.tanggal='Tanggal lahir tidak boleh di masa depan.';
+      return Object.keys(formState.errors).length===0;
+    }
+    function handleFormSubmit(event){
+      event.preventDefault();
+      if(formState.step<3){
+        if(!validateStep()){const key=Object.keys(formState.errors)[0];renderForm();const el=document.getElementById(key);if(el)el.focus();return;}
+        formState.step++;renderForm();window.scrollTo({top:0,behavior:'smooth'});return;
+      }
+      saveVisibleFields();
+      app.innerHTML=`<section class="form-wrap"><div class="shell"><div class="form-card"><div class="form-content success-panel"><div class="success-icon">✓</div><div class="eyebrow" style="justify-content:center">Formulir selesai</div><h2>Terima kasih, pendaftaran telah dilengkapi.</h2><p>Data calon santri dan orang tua atau wali sudah diisi. Pastikan nomor telepon yang dicantumkan selalu aktif untuk menerima informasi selanjutnya.</p><div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap"><button class="btn secondary" id="editForm" type="button">Periksa data</button><a class="btn" href="#/">Kembali ke beranda</a></div></div></div></div></section>`;
+      document.getElementById('editForm').addEventListener('click',()=>{formState.step=3;renderForm();window.scrollTo({top:0,behavior:'smooth'});});
+      window.scrollTo({top:0,behavior:'smooth'});
+    }
+
+    function render(){
+      const route=(location.hash.replace(/^#/, '')||'/').split('?')[0];
+      setActiveNav(route);
+      document.title=route==='/info-ppdb'?'Informasi Pendaftaran — Darul Hadits Al-Mubarok':route==='/formulir-ppdb'?'Formulir Pendaftaran — Darul Hadits Al-Mubarok':route==='/'?'Penerimaan Santri Baru — Darul Hadits Al-Mubarok':'Halaman tidak ditemukan — Darul Hadits Al-Mubarok';
+      if(route==='/info-ppdb')app.innerHTML=infoTemplate();
+      else if(route==='/formulir-ppdb')renderForm();
+      else if(route==='/')app.innerHTML=homeTemplate();
+      else app.innerHTML=`<section class="not-found"><div class="shell"><div class="admission-kicker">404 · Halaman tidak ditemukan</div><h1>Halaman tidak ditemukan.</h1><p>Alamat yang dibuka tidak tersedia. Silakan kembali ke halaman utama.</p><a class="btn" href="#/">Kembali ke beranda</a></div></section>`;
+      app.focus({preventScroll:true});
+    }
+    window.addEventListener('hashchange',render);
+    document.addEventListener('click',e=>{
+      const link=e.target.closest('a[href^="#/"]');
+      if(link && location.hash===link.getAttribute('href')){render();}
+    });
+    render();
+  </script>
+</body>
+</html>
